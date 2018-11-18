@@ -14,7 +14,11 @@ using namespace std;
 int main() {
   vector<cv::Mat> img;
   vector<cv::String> name;
+  vector<cv::String> path;
   BatchLoader loader("../data", true);
-  loader.load(img, name);
+  loader.load(img, path, name);
+
+  loader.save(img, path, name);
+
   return 0;
 }
