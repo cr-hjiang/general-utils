@@ -52,7 +52,7 @@ void BatchLoader::load(vector<cv::Mat> &img_buf, vector<cv::String> &img_path, v
 void BatchLoader::save(vector<cv::Mat> &img_buf, vector<cv::String> &img_path, vector<cv::String> &img_name) {
   if(img_buf.size() == img_path.size() && img_buf.size() == img_name.size()) {
     for(int i = 0; i < img_buf.size(); i++) {
-      cv::String tmp_path = img_path[i] + "CR_" + to_string(i) + "_" + img_name[i];
+      cv::String tmp_path = img_path[i] + "(CR_" + to_string(i) + ")" + img_name[i];
       cv::imwrite(tmp_path, img_buf[i]);
     }
   } else {

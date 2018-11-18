@@ -7,9 +7,9 @@
 #include <unistd.h>
 #include <time.h>
 
-class Proctimer
-{
+class ProcTimer {
 public:
+  ProcTimer();
   void get_start_time();
   float get_end_time(std::string proc_name = "Execution");
 private:
