@@ -1,16 +1,19 @@
-#include "cr_timer.h"
+#include "CrTimer.h"
 
 using namespace std;
 
-ProcTimer::ProcTimer(void) {
+CrTimer::CrTimer() {
   cout << "[CORERAIN] Setting up a timer." << endl;
 }
+CrTimer::~CrTimer() {
+  cout << "[CORERAIN] Deleting a timer." << endl;
+}
 
-void ProcTimer::get_start_time() {
+void CrTimer::get_start_time() {
   clock_gettime(CLOCK_REALTIME, &t_start);
 }
 
-float ProcTimer::get_end_time(string proc_name) {
+float CrTimer::get_end_time(string proc_name) {
   clock_gettime(CLOCK_REALTIME, &t_end);
   dt_s = t_end.tv_sec-t_start.tv_sec;
   dt_ns = t_end.tv_nsec-t_start.tv_nsec;

@@ -5,6 +5,8 @@ BatchLoader::BatchLoader(string input_path, bool recursion) {
   loading_path = input_path;
   dir_recursion = recursion;
 }
+BatchLoader::~BatchLoader() {
+}
 
 void BatchLoader::set_path(string path, bool recursion) {
   loading_path = path;

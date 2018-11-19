@@ -1,5 +1,5 @@
-#ifndef CR_TIMER_H
-#define CR_TIMER_H
+#ifndef CRTIMER_H
+#define CRTIMER_H
 
 #include <iostream>
 #include <string>
@@ -7,9 +7,10 @@
 #include <unistd.h>
 #include <time.h>
 
-class ProcTimer {
+class CrTimer {
 public:
-  ProcTimer();
+  CrTimer();
+  ~CrTimer();
   void get_start_time();
   float get_end_time(std::string proc_name = "Execution");
 private:
@@ -20,4 +21,4 @@ private:
 };
 
 
-#endif //CR_TIMER_H
+#endif //CRTIMER_H

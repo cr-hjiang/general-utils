@@ -8,7 +8,7 @@
 
 #include "BatchLoader.h"
 #include "cr_printer.h"
-#include "cr_timer.h"
+#include "CrTimer.h"
 
 using namespace std;
 
@@ -18,7 +18,7 @@ int main() {
   vector<cv::String> name;
   vector<cv::String> path;
   BatchLoader loader("../data", true);
-  ProcTimer a_timer;
+  CrTimer a_timer;
 
   a_timer.get_start_time();
   loader.load(img, path, name);
